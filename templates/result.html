@@ -5,5 +5,12 @@
     	<p>{{location1}}</p><br>
     	<p>{{favorite_language1}}</p><br>
     	<p>{{comment1}}</p><br>
+		{% with messages=get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<p><strong>{{message}}</strong></p>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}    
 	</body>
 </html>

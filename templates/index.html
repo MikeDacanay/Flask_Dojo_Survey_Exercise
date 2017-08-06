@@ -16,7 +16,13 @@
 			Comment:
 			<textarea name="comment"></textarea><br>
 			<input type='submit' value='Submit'>
-
+<!-- 			{% with messages=get_flashed_messages() %}
+				{% if messages %}
+					{% for message in messages %}
+						<p>{{message}}</p>
+					{% endfor %}
+				{% endif %}
+			{% endwith %} -->
 		</form>
 	</body>
 </html>
